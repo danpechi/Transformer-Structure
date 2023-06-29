@@ -55,6 +55,7 @@ class TextDataset(Dataset):
                 )
 
             else:
+                print("X")
                 logger.info(f"Creating features from dataset file at {directory}")
 
                 self.examples = []
@@ -96,6 +97,7 @@ class LineByLineTextDataset(Dataset):
         # Here, we do not cache the features, operating under the assumption
         # that we will soon use fast multithreaded tokenizers from the
         # `tokenizers` repo everywhere =)
+        print("Y")
         logger.info("Creating features from dataset file at %s", file_path)
 
         with open(file_path, encoding="utf-8") as f:
@@ -167,6 +169,7 @@ class TextDatasetForNextSentencePrediction(Dataset):
                     f"Loading features from cached file {cached_features_file} [took %.3f s]", time.time() - start
                 )
             else:
+                print("Z")
                 logger.info(f"Creating features from dataset file at {directory}")
 
                 self.examples = [[]]
