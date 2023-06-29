@@ -90,7 +90,7 @@ training_args = TrainingArguments(
   weight_decay = 0.01,
   fp16 = True
 )
-
+print("Loaded")
 trainer = Trainer(
   model = model,
   args = training_args,
@@ -98,7 +98,9 @@ trainer = Trainer(
   train_dataset = train_set,
   eval_dataset = eval_set,
 )
+print("Train Configged")
 
 trainer.train()
+print("Trained")
 
 trainer.save_model(args.output_path)
