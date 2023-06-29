@@ -39,6 +39,7 @@ tokenizer = BertTokenizerFast(args.tokenizer_path,
   eos_token = '</s>',
   bos_token = '<s>'
 )
+print("Tokenized")
 config = RobertaConfig(
   vocab_size = len(tokenizer),
   cls_token_id = 0,
@@ -52,8 +53,10 @@ config = RobertaConfig(
   intermediate_size = 2048,
   num_hidden_layers = 8,
 )
+print("Configged")
 
 model = RobertaForMaskedLM(config = config)
+print("Modeled")
 train_set = LineByLineTextDataset(
   tokenizer=tokenizer,
   file_path = args.train_set,
