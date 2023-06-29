@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-export path_to_the_zip_file="" # For example: ~/Downloads/  #TODO
-export path_to_this_repo=$path_to_the_zip_file"/EMNLP_2723/Transformer-Structure"
+export path_to_the_zip_file="/scratch/dp3864/ts/" # For example: ~/Downloads/  #TODO
+export path_to_this_repo=$path_to_the_zip_file"/Transformer-Structure/Transformer-Structure"
 export model_save_place="./temp"  #TODO
 export pretrain_model_save_place=$model_save_place"/pretrain"
 export finetune_model_save_place=$model_save_place"/finetune"
@@ -12,7 +12,7 @@ function run_pretrain_roberta {
     --max_pos_emb 128 \
     --train_set $path_to_this_repo/Preprocess/$data_type/data/train.txt \
     --eval_set $path_to_this_repo/Preprocess/$data_type/data/eval.txt \
-    --tokenizer_path $path_to_this_repo/Preprocess/$data_type/tokenizer \
+    --tokenizer_path $path_to_this_repo/Preprocess/$data_type/tokenizer/vocab.txt \
     --per_device_train_batch_size 300 \
     --max_steps 100000 \
     --warmup_steps 5000 \
@@ -24,5 +24,5 @@ function run_pretrain_roberta {
     --seed 31616
 }
 
-#run_pretrain_roberta Random_baseline $pretrain_model_save_place 
+run_pretrain_roberta Random_baseline $pretrain_model_save_place
 
