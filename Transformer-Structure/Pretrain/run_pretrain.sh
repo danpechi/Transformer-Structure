@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 export path_to_the_zip_file="/scratch/dp3864/ts" # For example: ~/Downloads/  #TODO
 export path_to_this_repo=$path_to_the_zip_file"/Transformer-Structure/Transformer-Structure"
-export model_save_place="./temp"  #TODO
+export model_save_place="/save"  #TODO
 export pretrain_model_save_place=$model_save_place"/pretrain"
 export finetune_model_save_place=$model_save_place"/finetune"
 

@@ -62,11 +62,14 @@ train_set = LineByLineTextDataset(
   file_path = args.train_set,
   block_size = 126,
 )
+print("Train Set")
 eval_set = LineByLineTextDataset(
   tokenizer = tokenizer,
   file_path = args.eval_set,
   block_size = 126,
 )
+print("Eval"
+      " Set")
 
 data_collator = DataCollatorForLanguageModeling(
   tokenizer = tokenizer, mlm = True, mlm_probability = 0.15
