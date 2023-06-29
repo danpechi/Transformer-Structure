@@ -24,5 +24,5 @@ function run_pretrain_roberta {
     --seed 31616
 }
 
-run_pretrain_roberta Random_baseline $pretrain_model_save_place
+run_pretrain_roberta nesting_parentheses $pretrain_model_save_place
 
