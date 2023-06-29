@@ -8,6 +8,7 @@ from transformers import DataCollatorForLanguageModeling
 from transformers import Trainer, TrainingArguments
 transformers.logging.set_verbosity_info()
 import argparse
+import logging
 
 logging.getLogger().setLevel(logging.DEBUG)
 
