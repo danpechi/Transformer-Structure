@@ -9,6 +9,8 @@ from transformers import Trainer, TrainingArguments
 transformers.logging.set_verbosity_info()
 import argparse
 
+logging.getLogger().setLevel(logging.DEBUG)
+
 parser = argparse.ArgumentParser()
 parser.add_argument("--max_pos_emb", type = int, default = 512, help = "max number of positional embedding")
 parser.add_argument("--tokenizer_path", type = str, help = "path to tokenizers")
@@ -68,8 +70,7 @@ eval_set = LineByLineTextDataset(
   file_path = args.eval_set,
   block_size = 126,
 )
-print("Eval"
-      " Set")
+print("Eval Set")
 
 data_collator = DataCollatorForLanguageModeling(
   tokenizer = tokenizer, mlm = True, mlm_probability = 0.15
