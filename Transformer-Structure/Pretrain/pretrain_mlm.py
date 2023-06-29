@@ -29,7 +29,7 @@ args = parser.parse_args()
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
-tokenizer = BertTokenizerFast.from_pretrained(args.tokenizer_path, 
+tokenizer = BertTokenizerFast(args.tokenizer_path,
   max_len = args.max_pos_emb,
   unk_token = '<unk>',
   sep_token = '</s>',
