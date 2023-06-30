@@ -13,7 +13,7 @@ import sys
 sys.path.append('../..')
 import transformers2 as transformers
 print(transformers.__file__)
-transformers.logging.set_verbosity_debug()
+transformers.logging.set_verbosity_info()
 from transformers import RobertaConfig, BertTokenizerFast, RobertaForMaskedLM
 from transformers import LineByLineTextDataset
 from transformers import DataCollatorForLanguageModeling
