@@ -117,7 +117,7 @@ class GlueDataset(Dataset):
                 )
             else:
                 logger.info(f"Creating features from dataset file at {args.data_dir}")
-                print("Begang")
+                logger.info(f"Began")
                 if mode == Split.dev:
                     examples = self.processor.get_dev_examples(args.data_dir)
                 elif mode == Split.test:
@@ -126,7 +126,7 @@ class GlueDataset(Dataset):
                     examples = self.processor.get_train_examples(args.data_dir)
                 if limit_length is not None:
                     examples = examples[:limit_length]
-                print("Done")
+                logger.info(f"Ended")
                 self.features = glue_convert_examples_to_features(
                     examples,
                     tokenizer,

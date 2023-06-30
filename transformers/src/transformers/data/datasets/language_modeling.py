@@ -56,7 +56,7 @@ class TextDataset(Dataset):
 
             else:
                 logger.info("X")
-                logger.info(f"Creating features from dataset file at {directory}")
+                logger.info(f"X Creating features from dataset file at {directory}")
 
                 self.examples = []
                 with open(file_path, encoding="utf-8") as f:
@@ -170,7 +170,7 @@ class TextDatasetForNextSentencePrediction(Dataset):
                 )
             else:
                 logger.info("Z")
-                logger.info(f"Creating features from dataset file at {directory}")
+                logger.info(f"Z Creating features from dataset file at {directory}")
 
                 self.examples = [[]]
                 with open(file_path, encoding="utf-8") as f:
