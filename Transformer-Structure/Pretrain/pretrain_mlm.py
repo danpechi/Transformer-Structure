@@ -1,16 +1,20 @@
 #!/usr/bin/env python3
 
 import torch
-import transformers
-from transformers import RobertaConfig, BertTokenizerFast, RobertaForMaskedLM
-from transformers import LineByLineTextDataset
-from transformers import DataCollatorForLanguageModeling
-from transformers import Trainer, TrainingArguments
-transformers.logging.set_verbosity_debug()
+
+
+
 import argparse
 import logging
 
 import sys
+sys.path.append('../Transformer-Structure')
+from ... import transformers
+transformers.logging.set_verbosity_debug()
+from transformers import RobertaConfig, BertTokenizerFast, RobertaForMaskedLM
+from transformers import LineByLineTextDataset
+from transformers import DataCollatorForLanguageModeling
+from transformers import Trainer, TrainingArguments
 
 root = logging.getLogger()
 root.setLevel(logging.DEBUG)
