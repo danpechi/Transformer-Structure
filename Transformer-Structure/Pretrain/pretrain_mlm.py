@@ -6,7 +6,7 @@ from transformers import RobertaConfig, BertTokenizerFast, RobertaForMaskedLM
 from transformers import LineByLineTextDataset
 from transformers import DataCollatorForLanguageModeling
 from transformers import Trainer, TrainingArguments
-transformers.logging.set_verbosity_info()
+transformers.logging.set_verbosity_debug()
 import argparse
 import logging
 
