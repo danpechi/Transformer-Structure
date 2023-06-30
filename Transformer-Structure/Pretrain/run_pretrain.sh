@@ -17,7 +17,7 @@ function run_pretrain_roberta {
     --max_steps 100000 \
     --warmup_steps 5000 \
     --logging_steps 1000 \
-    --logging_dir $output_dir/logs/roberta/$data_type/ \
+    --logging_dir $output_dir/logs/roberta/$data_type \
     --output_path $output_dir/models/roberta/$data_type/ \
     --save_steps 20000  \
     --dataloader_num_workers 4 \
