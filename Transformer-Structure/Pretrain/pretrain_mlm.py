@@ -11,13 +11,14 @@ import sys
 # sys.path.append('../Transformer-Structure')
 # from ... import transformers
 sys.path.append('../..')
-import transformers2 as transformers
+import transformers
 print(transformers.__file__)
 # transformers.logging.set_verbosity_info()
-from transformers2 import RobertaConfig, BertTokenizerFast, RobertaForMaskedLM
-from transformers2 import LineByLineTextDataset
-from transformers2 import DataCollatorForLanguageModeling
-from transformers2 import Trainer, TrainingArguments
+from transformers.src.transformers.utils.configuration_roberta import RobertaConfig
+from transformers import BertTokenizerFast, RobertaForMaskedLM
+from transformers import LineByLineTextDataset
+from transformers import DataCollatorForLanguageModeling
+from transformers import Trainer, TrainingArguments
 
 root = logging.getLogger()
 root.setLevel(logging.DEBUG)
