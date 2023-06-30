@@ -10,7 +10,7 @@ import logging
 import sys
 # sys.path.append('../Transformer-Structure')
 # from ... import transformers
-sys.path.append('..')
+sys.path.append('../..')
 import transformers2 as transformers
 print(transformers.__file__)
 transformers.logging.set_verbosity_debug()
