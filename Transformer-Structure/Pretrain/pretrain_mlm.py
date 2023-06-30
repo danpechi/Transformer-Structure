@@ -11,10 +11,10 @@ import sys
 # sys.path.append('../Transformer-Structure')
 # from ... import transformers
 sys.path.append('../..')
-import transformers
+from transformers.src import transformers
 print(transformers.__file__)
 # transformers.logging.set_verbosity_info()
-from transformers.src.transformers.utils.configuration_roberta import RobertaConfig
+from transformers import RobertaConfig
 from transformers import BertTokenizerFast, RobertaForMaskedLM
 from transformers import LineByLineTextDataset
 from transformers import DataCollatorForLanguageModeling
