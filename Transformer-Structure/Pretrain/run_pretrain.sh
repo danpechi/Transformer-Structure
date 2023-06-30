@@ -4,6 +4,7 @@ export path_to_this_repo=$path_to_the_zip_file"/Transformer-Structure/Transforme
 export model_save_place=$path_to_the_zip_file$path_to_this_repo"/save"  #TODO
 export pretrain_model_save_place=$model_save_place"/pretrain"
 export finetune_model_save_place=$model_save_place"/finetune"
+export path_to_transformers=$path_to_the_zip_file"/Transformer-Structure
 
 function run_pretrain_roberta {
   data_type=$1
