@@ -10,7 +10,16 @@ transformers.logging.set_verbosity_info()
 import argparse
 import logging
 
-logging.getLogger().setLevel(logging.DEBUG)
+import sys
+
+root = logging.getLogger()
+root.setLevel(logging.DEBUG)
+
+handler = logging.StreamHandler(sys.stdout)
+handler.setLevel(logging.DEBUG)
+formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+handler.setFormatter(formatter)
+root.addHandler(handler)
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--max_pos_emb", type = int, default = 512, help = "max number of positional embedding")
