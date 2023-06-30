@@ -8,8 +8,10 @@ import argparse
 import logging
 
 import sys
-sys.path.append('../Transformer-Structure')
-from ... import transformers
+# sys.path.append('../Transformer-Structure')
+# from ... import transformers
+import transformers
+print(transformers.__file__)
 transformers.logging.set_verbosity_debug()
 from transformers import RobertaConfig, BertTokenizerFast, RobertaForMaskedLM
 from transformers import LineByLineTextDataset
