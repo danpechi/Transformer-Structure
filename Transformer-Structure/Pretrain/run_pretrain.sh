@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 export path_to_the_zip_file="/scratch/dp3864/ts" # For example: ~/Downloads/  #TODO
 export path_to_this_repo=$path_to_the_zip_file"/Transformer-Structure/Transformer-Structure"
-export model_save_place=$path_to_the_zip_file$path_to_this_repomm"/save"  #TODO
+export model_save_place=$path_to_the_zip_file$path_to_this_repo"/save"  #TODO
 export pretrain_model_save_place=$model_save_place"/pretrain"
 export finetune_model_save_place=$model_save_place"/finetune"
 
@@ -18,7 +18,7 @@ function run_pretrain_roberta {
     --warmup_steps 5000 \
     --logging_steps 1000 \
     --logging_dir $output_dir/logs/roberta/$data_type/ \
-    --output_path $output_rdir/models/roberta/$data_type/ \
+    --output_path $output_dir/models/roberta/$data_type/ \
     --save_steps 20000  \
     --dataloader_num_workers 4 \
     --seed 31616
